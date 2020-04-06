@@ -153,10 +153,12 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
   while (1)
 	{
-		amr_get_readout(&cfg, obis_code, sizeof(obis_code) / sizeof(obis_code[0]));
+				amr_get_readout(&cfg, obis_code, sizeof(obis_code) / sizeof(obis_code[0]));
 	}
+	
     /* USER CODE END WHILE */
 	
     /* USER CODE BEGIN 3 */
