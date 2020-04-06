@@ -29,11 +29,11 @@ typedef enum error
 
 struct amr_config
 {
-    void (*write) (const unsigned char* data, uint8_t size);
+  void (*write) (const unsigned char* data, uint8_t size);
 
 	const char* amr_type;
 
-    const char* SerialNumber;
+  const char* SerialNumber;
 	
 	uint32_t bufsize;
 	
