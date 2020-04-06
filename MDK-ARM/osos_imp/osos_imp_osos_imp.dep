@@ -1,6 +1,6 @@
 Dependencies for Project 'osos_imp', Target 'osos_imp': (DO NOT MODIFY !)
 F (startup_stm32f746xx.s)(0x5E8ADE96)(--cpu Cortex-M7.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_osos_imp-IC:\Users\volkan.unal\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\volkan.unal\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include--pd "__UVISION_VERSION SETA 528" --pd "_RTE_ SETA 1" --pd "STM32F746xx SETA 1"--list startup_stm32f746xx.lst --xref -o osos_imp\startup_stm32f746xx.o --depend osos_imp\startup_stm32f746xx.d)
-F (../Src/main.c)(0x5E8AEB67)(--c99 -c --cpu Cortex-M7.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I ../Drivers/CMSIS/Include -I ..\API_AMR-I.\RTE\_osos_imp-IC:\Users\volkan.unal\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\volkan.unal\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F746xx -DUSE_HAL_DRIVER -DSTM32F746xx-o osos_imp\main.o --depend osos_imp\main.d)
+F (../Src/main.c)(0x5E8AF0B8)(--c99 -c --cpu Cortex-M7.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I ../Drivers/CMSIS/Include -I ..\API_AMR-I.\RTE\_osos_imp-IC:\Users\volkan.unal\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\volkan.unal\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F746xx -DUSE_HAL_DRIVER -DSTM32F746xx-o osos_imp\main.o --depend osos_imp\main.d)
 I (../Inc/main.h)(0x5E8ADE91)
 I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h)(0x5E7B0F5B)
 I (../Inc/stm32f7xx_hal_conf.h)(0x5E8ADE90)
@@ -35,7 +35,7 @@ I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h)(0x5E7B0F5B)
 I (../Inc/dma.h)(0x5E8ADE8E)
 I (../Inc/usart.h)(0x5E8ADF30)
 I (../Inc/gpio.h)(0x5E8ADE8D)
-I (..\API_AMR\osos.h)(0x5E8AD992)
+I (..\API_AMR\osos.h)(0x5E8AF087)
 I (..\API_AMR\bsp.h)(0x5E874567)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEBC032)
 F (../Src/gpio.c)(0x5E8ADE8C)(--c99 -c --cpu Cortex-M7.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I ../Drivers/CMSIS/Include -I ..\API_AMR-I.\RTE\_osos_imp-IC:\Users\volkan.unal\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\volkan.unal\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F746xx -DUSE_HAL_DRIVER -DSTM32F746xx-o osos_imp\gpio.o --depend osos_imp\gpio.d)
@@ -170,7 +170,7 @@ I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h)(0x5E7B0F5B)
 I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h)(0x5E7B0F5B)
 I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h)(0x5E7B0F5B)
 I (../Inc/stm32f7xx_it.h)(0x5E8ADE8F)
-I (..\API_AMR\osos.h)(0x5E8AD992)
+I (..\API_AMR\osos.h)(0x5E8AF087)
 I (..\API_AMR\bsp.h)(0x5E874567)
 F (../Src/stm32f7xx_hal_msp.c)(0x5E8ADE8F)(--c99 -c --cpu Cortex-M7.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I ../Drivers/CMSIS/Include -I ..\API_AMR-I.\RTE\_osos_imp-IC:\Users\volkan.unal\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\volkan.unal\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F746xx -DUSE_HAL_DRIVER -DSTM32F746xx-o osos_imp\stm32f7xx_hal_msp.o --depend osos_imp\stm32f7xx_hal_msp.d)
 I (../Inc/main.h)(0x5E8ADE91)
@@ -793,12 +793,12 @@ I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h)(0x5E7B0F5B)
 I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h)(0x5E7B0F5B)
 I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h)(0x5E7B0F5B)
 I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h)(0x5E7B0F5B)
-F (..\API_AMR\osos.c)(0x5E8AE73F)(--c99 -c --cpu Cortex-M7.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I ../Drivers/CMSIS/Include -I ..\API_AMR-I.\RTE\_osos_imp-IC:\Users\volkan.unal\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\volkan.unal\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F746xx -DUSE_HAL_DRIVER -DSTM32F746xx-o osos_imp\osos.o --depend osos_imp\osos.d)
+F (..\API_AMR\osos.c)(0x5E8AF49C)(--c99 -c --cpu Cortex-M7.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I ../Drivers/CMSIS/Include -I ..\API_AMR-I.\RTE\_osos_imp-IC:\Users\volkan.unal\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\volkan.unal\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F746xx -DUSE_HAL_DRIVER -DSTM32F746xx-o osos_imp\osos.o --depend osos_imp\osos.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEBC032)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEBC032)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEBC02E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEBC032)
-I (..\API_AMR\osos.h)(0x5E8AD992)
+I (..\API_AMR\osos.h)(0x5E8AF087)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEBC032)
 I (..\API_AMR\bsp.h)(0x5E874567)
 F (C:\Users\volkan.unal\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.1\Source\retarget_io.c)(0x584E700E)(--c99 -c --cpu Cortex-M7.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I ../Drivers/CMSIS/Include -I ..\API_AMR-I.\RTE\_osos_imp-IC:\Users\volkan.unal\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\volkan.unal\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F746xx -DUSE_HAL_DRIVER -DSTM32F746xx-o osos_imp\retarget_io.o --depend osos_imp\retarget_io.d)

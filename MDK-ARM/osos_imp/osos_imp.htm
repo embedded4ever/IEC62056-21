@@ -3,7 +3,7 @@
 <title>Static Call Graph - [osos_imp\osos_imp.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image osos_imp\osos_imp.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Apr 06 11:42:17 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Apr 06 12:21:37 2020
 <BR><P>
 <H3>Maximum Stack Usage =        312 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -953,7 +953,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_message
 </UL>
 
-<P><STRONG><a name="[b0]"></a>HAL_UART_TxCpltCallback</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, main.o(i.HAL_UART_TxCpltCallback))
+<P><STRONG><a name="[b0]"></a>HAL_UART_TxCpltCallback</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, main.o(i.HAL_UART_TxCpltCallback))
 <BR><BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_DMATransmitCplt
@@ -1022,7 +1022,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f746xx.o(RESET)
 </UL>
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, stm32f7xx_it.o(i.SysTick_Handler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = SysTick_Handler &rArr; sys_process
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = SysTick_Handler &rArr; sys_process &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_process
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IncTick
@@ -1098,7 +1098,8 @@ Global Symbols
 <P><STRONG><a name="[bd]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;amr_get_readout
+<BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_process
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;amr_get_readout
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_start_message
@@ -1202,10 +1203,11 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.data)
 </UL>
-<P><STRONG><a name="[c2]"></a>sys_process</STRONG> (Thumb, 88 bytes, Stack size 24 bytes, osos.o(i.sys_process))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = sys_process
+<P><STRONG><a name="[c2]"></a>sys_process</STRONG> (Thumb, 196 bytes, Stack size 32 bytes, osos.o(i.sys_process))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = sys_process &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
@@ -1316,7 +1318,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;amr_get_readout
 </UL>
 
-<P><STRONG><a name="[d7]"></a>send_start_message</STRONG> (Thumb, 146 bytes, Stack size 48 bytes, osos.o(i.send_start_message))
+<P><STRONG><a name="[d7]"></a>send_start_message</STRONG> (Thumb, 138 bytes, Stack size 48 bytes, osos.o(i.send_start_message))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = send_start_message &rArr; __2snprintf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
