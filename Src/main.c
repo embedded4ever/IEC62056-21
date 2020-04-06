@@ -95,13 +95,13 @@ void HAL_UART_RxCpltCallback (UART_HandleTypeDef * huart)
 
 void HAL_UART_TxCpltCallback (UART_HandleTypeDef *huart)
 {
-	
 	if (huart->Instance == USART2)  
 	{
 		systick_tick = 0;
 		buffer_index = 0;
 		MAX485_RECV
 	}
+	
 }
 
 
