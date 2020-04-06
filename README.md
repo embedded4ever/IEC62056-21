@@ -4,7 +4,7 @@
 
 Debug Output 
 
-Init OK...
+Init OK...\
 Start Message Send
 /LUN5<1>LUN669205929
 Readout Message Send
