@@ -20,6 +20,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "dma.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -62,41 +63,42 @@ char buffer[3000];
 uint32_t systick_tick = 0;
 uint32_t buffer_index = 0;
 
-void send_message(const char* data, uint8_t size)
+void send_message(const unsigned char* data, uint8_t size)
 {
 	MAX485_TRAN
-	DEBUG_LOG("Send data = %s", data);
-    HAL_UART_Transmit_IT(&huart2, (unsigned char *)data, size);
-	HAL_Delay(1000);
+	HAL_UART_Transmit_DMA(&huart2, (unsigned char *)data, size);
 }
 
 struct amr_config cfg = {
-
-    .write = send_message,
-    .amr_type = "LUNA",
-    .SerialNumber = "69205929",
+  
+	.write = send_message,
+	.amr_type = "LUNA",
+	.SerialNumber = "69205929",
 	.bufsize = 3000,
 	.buf = buffer,
 	.uart_init = MX_USART2_UART_Init,
+  
 };
 
 unsigned char test;
 
 void HAL_UART_RxCpltCallback (UART_HandleTypeDef * huart) 
 {
-    if (huart -> Instance == USART2) 
-    {
-		systick_tick = 0;
-        HAL_UART_Receive_IT(&huart2 ,(uint8_t *)&test, 1);
-		buffer[buffer_index++] = test;
-		DEBUG_LOG("%c", test);
-    }
+  if (huart -> Instance == USART2) 
+  {
+    systick_tick = 0;
+    HAL_UART_Receive_IT(&huart2 ,(uint8_t *)&test, 1);
+    buffer[buffer_index++] = test;
+    DEBUG_LOG("%c", test);
+  }
 }
 
 void HAL_UART_TxCpltCallback (UART_HandleTypeDef *huart)
 {
+	
 	if (huart->Instance == USART2)  
-    {
+  {
+		systick_tick = 0;
 		buffer_index = 0;
 		MAX485_RECV
 	}
@@ -136,25 +138,31 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_USART2_UART_Init(300);
   /* USER CODE BEGIN 2 */
 
 	MAX485_RECV
-	HAL_UART_Receive_IT(&huart2, (uint8_t *)&test, 1);
+	//HAL_UART_Receive_DMA_IT(&huart2, (uint8_t *)&test, 1);
+	HAL_UART_Receive_DMA(&huart2, &test, 1);
 	
 	if (amr_init_config(&cfg) == RETURN_OK)
-    {
-        DEBUG_LOG("Init OK...\r\n");
-    }
+  {
+      DEBUG_LOG("Init OK...\r\n");
+  }
 	
-   /* USER CODE END 2 */
-   /* Infinite loop */
+  /* USER CODE END 2 */
+
+  /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
+  
   {
     /* USER CODE END WHILE */
-	amr_get_readout(&cfg, obis_code, sizeof(obis_code)/sizeof(obis_code[0]));
+	amr_get_readout(&cfg, obis_code, sizeof(obis_code) / sizeof(obis_code[0]));
     /* USER CODE BEGIN 3 */
+		
+		
   }
   /* USER CODE END 3 */
 }

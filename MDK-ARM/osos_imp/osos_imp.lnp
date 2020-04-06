@@ -2,6 +2,7 @@
 "osos_imp\startup_stm32f746xx.o"
 "osos_imp\main.o"
 "osos_imp\gpio.o"
+"osos_imp\dma.o"
 "osos_imp\usart.o"
 "osos_imp\stm32f7xx_it.o"
 "osos_imp\stm32f7xx_hal_msp.o"

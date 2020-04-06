@@ -29,7 +29,7 @@ typedef enum error
 
 struct amr_config
 {
-    void (*write) (const char* data, uint8_t size);
+    void (*write) (const unsigned char* data, uint8_t size);
 
 	const char* amr_type;
 
@@ -50,7 +50,6 @@ err
 amr_init_config(const struct amr_config*);
 
 void sys_process(struct amr_config*);
-
 
 
 #ifdef __cplusplus
