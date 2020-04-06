@@ -154,11 +154,13 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
-  {
-    /* USER CODE END WHILE */
-	amr_get_readout(&cfg, obis_code, sizeof(obis_code) / sizeof(obis_code[0]));
-    /* USER CODE BEGIN 3 */
+	{
+		amr_get_readout(&cfg, obis_code, sizeof(obis_code) / sizeof(obis_code[0]));
 	}
+    /* USER CODE END WHILE */
+	
+    /* USER CODE BEGIN 3 */
+	
   /* USER CODE END 3 */
 }
 
