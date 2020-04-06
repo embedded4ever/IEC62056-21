@@ -97,9 +97,10 @@ void HAL_UART_TxCpltCallback (UART_HandleTypeDef *huart)
 {
 	if (huart->Instance == USART2)  
 	{
-			systick_tick = 0; 
-			buffer_index = 0;
-			MAX485_RECV
+		
+		systick_tick = 0; 
+		buffer_index = 0;
+		MAX485_RECV
 	}
 	
 }
@@ -145,9 +146,10 @@ int main(void)
 	HAL_UART_Receive_DMA(&huart2, &test, 1);
 	
 	if (amr_init_config(&cfg) == RETURN_OK)
-  {
-      DEBUG_LOG("Init OK...\r\n");
-  }
+	{
+		DEBUG_LOG("Init OK...\r\n");
+	}
+  
 	
   /* USER CODE END 2 */
 
