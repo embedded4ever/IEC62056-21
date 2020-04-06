@@ -86,15 +86,16 @@ void HAL_UART_RxCpltCallback (UART_HandleTypeDef * huart)
 {
   if (huart -> Instance == USART2) 
   {
-    systick_tick = 0;
-    HAL_UART_Receive_IT(&huart2 ,(uint8_t *)&test, 1);
-    buffer[buffer_index++] = test;
-    DEBUG_LOG("%c", test);
+      systick_tick = 0;
+      HAL_UART_Receive_IT(&huart2 ,(uint8_t *)&test, 1);
+      buffer[buffer_index++] = test;
+      DEBUG_LOG("%c", test);
   }
 }
 
 void HAL_UART_TxCpltCallback (UART_HandleTypeDef *huart)
 {
+	
 	if (huart->Instance == USART2)  
 	{
 		systick_tick = 0;
